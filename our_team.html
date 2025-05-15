@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Construction Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="TAKMAB offers rural and urban planning, building construction, BOQs, project management, and EIA services across Zimbabwe." />
+  <link rel="stylesheet" href="takmabSite.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="fontawesome/css/all.min.css"
+  />
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Green color */
+            --secondary-color: #333;
+            --text-color: #666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .team-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-container {
+            position: relative;
+            height: 250px;
+            background: #eee;
+        }
+
+        .image-container i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .member-name {
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .member-role {
+            color: var(--primary-color);
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Top Contact Bar -->
+  <header class="top-contact-bar">
+    <div class="contact-info">
+         <div><i class="fas fa-location-dot fa-icon"></i>
+            <P>EMAIL US</P>
+        </div>
+         <div><i class="fas fa-envelope fa-icon"></i>
+            <p>EMAIL US</p>
+        </div>
+         <div><i class="fas fa-phone fa-icon"></i>
+            <p>CALL US</p>
+        </div>
+    </div>
+
+    <div class="socials">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter-square"></i>
+            <h4>Social Media</h4>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="logo">TAKMAB</div>
+    <ul class="nav-links">
+      <li><a href="takmabSite.html#">Home</a></li>
+      <li><a href="takmabSite.html#about">About Us</a></li>
+      <li><a href="takmabSite.html#services">Services</a></li>
+      <li><a href="takmabSite.html#projects">Projects</a></li>
+      <li><a href="takmabSite.html#team">Team</a></li>
+      <li><a href="takmabSite.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#consultation">Request A Quote</a>
+    </div>
+  </nav>
+
+    <section class="team-section">
+        <div class="section-title">
+            <h2>Meet Our Team</h2>
+        </div>
+        
+        <div class="team-grid">
+            <!-- Repeat this block for each team member (up to 20) -->
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                    <!-- Replace with actual image -->
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">John Doe</h3>
+                    <p class="member-role">Project Manager</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Jane Smith</h3>
+                    <p class="member-role">Site Engineer</p>
+                </div>
+            </div>
+            <!-- Add more team members here -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p class="company-info">Building excellence since 2008. We specialize in commercial and residential construction projects with a focus on sustainable development.</p>
+            </div>
+      
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+      
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i>1090 Norton Town Center</p>
+                    <p><i class="fas fa-phone"></i>0777777777</p>
+                    <p><i class="fas fa-envelope"></i>takmab@gmail.com/p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="footer-bottom">
+            <p>&copy; 2025 TakMab Planning Consultancy. All rights reserved | Designed with <i class="fas fa-heart"></i></p>
+        </div>
+      </footer>
+      
+</body>
+</html>
