@@ -1,4 +1,17 @@
 
+//Navigation on small screens
+const small_nav = document.querySelector(".nav-links");
+const menu_btns = document.querySelectorAll(".nav-icons i");
+const menu_btns_cont = document.querySelector(".nav-icons");
+
+menu_btns_cont.addEventListener("click", function() {
+    console.log("clicked")
+    small_nav.classList.toggle("active-small-nav");
+     menu_btns.forEach(btn => {
+        btn.classList.toggle("close")
+     })
+})
+
 
 /* hero section.js */
 

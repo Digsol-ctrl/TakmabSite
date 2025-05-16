@@ -12,6 +12,7 @@
     line-height: 1.6;
     background-color: #fff;
     color: #333;
+    overflow-x: hidden;
   }
 
   .socials .fa-icon {
@@ -97,10 +98,11 @@
     
 
     .socials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1px;
+      display: none
+      
+    }
+    .top-contact-bar {
+      grid-template-columns: 100%;
     }
 
     .socials h4 {
@@ -119,6 +121,15 @@
       line-height: 15px;
     }
   }
+
+ 
+
+.main-nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
   
   
   /* Navigation */
@@ -132,6 +143,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    position: relative;
   }
   
   .logo {
@@ -144,10 +156,27 @@
   
   .nav-links {
     list-style: none;
-    display: none;
     flex-direction: column;
     gap: 1rem;
   }
+
+   .nav-links {
+     list-style: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+ 
+
+   .nav-icons {
+    color: green;
+    font-size: 30px;
+    width: 30px;
+  }
+
+  .nav-icons .close {
+      display: none;
+    }
 
   .active-tab {
     background-color: #1b5e20;
@@ -166,6 +195,28 @@
     border-radius: 5px;
     font-size: 11px;
   }
+  @media (max-width: 768px) {
+  .nav-links {
+    list-style: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    position:absolute;
+    right: 0px;
+    top: 70px;
+    padding: 20px;
+    font-weight:bold;
+    opacity: 0;
+    width: 0;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+  }
+   .active-small-nav {
+    width:fit-content;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+  }
+  }
   
   @media (min-width: 768px) {
     .nav-links {
@@ -178,6 +229,11 @@
       font-weight: bold;
       color: #2e7d32;
     }
+
+    .nav-icons {
+      display: none;
+    }
+    
   }
  
 
@@ -536,7 +592,7 @@ About_us Sectuion
     padding: 2rem 1rem;
     background-color: #fff;
     text-align: center;
-    margin: auto 30px;
+    margin: auto;
   }
   
   .services h2 {
@@ -1641,7 +1697,7 @@ color: #616161;
   bottom: 50px;
   background-color: white;
   height: fit-content;
-  height: 60px;
+  height: 30px;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -1650,7 +1706,7 @@ color: #616161;
 } 
 
 .whatsapp-icon {
-  font-size: 70px;
+  font-size: 50px;
   color: rgb(4, 190, 4);
   
 }
