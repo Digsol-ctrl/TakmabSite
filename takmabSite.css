@@ -252,7 +252,7 @@
   .hero {
     position: relative;
     height: 100vh;
-    background: linear-gradient(rgba(40, 180, 98, 0.713), rgba(40, 180, 98, 0.233)),
+    background: linear-gradient(rgba(40, 180, 98, 0.425), rgba(40, 180, 98, 0.233)),
                 url('images/IMG-20250426-WA0006.jpg') center/cover;
     overflow: hidden;
     display: flex;
