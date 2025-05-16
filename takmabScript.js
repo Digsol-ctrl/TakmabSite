@@ -87,12 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        console.log(entry.isIntersecting, entry.intersectionRatio >= 0.2 )
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           entry.target.classList.add('active');
         }
       });
     }, {
-      threshold: 0.5
+      threshold: 0.2
     });
   
     observer.observe(aboutSection);
@@ -210,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             }
         });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     observer.observe(contactSection);
 });
