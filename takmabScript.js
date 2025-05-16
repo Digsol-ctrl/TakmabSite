@@ -70,11 +70,11 @@ const projects_observer = new IntersectionObserver((entries) => {
             projectCards.forEach((item, index) => {
                 setTimeout(() => {
                     item.classList.add('active');
-                }, index * 200);
+                }, index * 500);
             });
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.1 });
 
 projects_observer.observe(projectsSection);
 });
