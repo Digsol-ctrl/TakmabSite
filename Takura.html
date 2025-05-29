@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Profile | Company Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="takmabSite.css" />
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #4caf50;
+            --accent: #ff9800;
+            --light: #f8f9fa;
+            --dark: #212121;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -30px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* Main Content Styles */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin: 4rem auto;
+        }
+
+        .profile-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+        }
+
+        .profile-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .ceo-name {
+            color: var(--primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .ceo-name::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .ceo-title {
+            color: var(--gray);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .bio {
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* Qualification Cards */
+        .section-title {
+            color: var(--primary-dark);
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            padding: 20px;
+            background: rgba(46, 125, 50, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .card-icon {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.3rem;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .qualification-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .qualification-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .qualification-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .institution {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .skill-category {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .skill-list {
+            padding: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .skill-name {
+            font-weight: 500;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .profile-section {
+                flex-direction: column;
+            }
+            
+            .profile-image {
+                height: 350px;
+            }
+            
+            .qualifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .ceo-name {
+                font-size: 1.8rem;
+            }
+            
+            .header-content {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">TAKMABdiv>
+                <h1 class="page-title">Executive Leadership Profile</h1>
+                <p class="subtitle">Learn about our CEO's extensive qualifications, education, and professional journey that drives our company's vision and success</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <div class="profile-image">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="profile-info">
+                <h2 class="ceo-name">Takura Mabaya</h2>
+                <p class="ceo-title">Chief Executive Officer & Founder</p>
+                <p class="bio">
+                    With over 20 years of executive leadership experience, Takura Mabaya has Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores vitae ullam aperiam quisquam modi accusantium cum aliquam non voluptas ipsa.
+                </p>
+                <p class="bio">
+                    Takura Mabaya Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsam provident unde facere quis eos ipsa cupiditate? Laborum, aspernatur quibusdam!
+                </p>
+            </div>
+        </section>
+
+        <h2 class="section-title">Education & Academic Credentials</h2>
+        <div class="qualifications-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="card-title">Masters Degree</h3>
+                </div>
+                <div class="card-body">
+                    <div class="qualification-item">
+                        <div class="qualification-title">Masters in Urban Design</div>
+                        <div class="institution">...... University</div>
+                        <div class="date">2010 - 2014</div>
+                        <div class="description">
+                            Dissertation focused on "Lorem ipsum dolor sit amet consectetur adipisicing.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="card-title">Bachelors Degrees</h3>
+                </div>
+                <div class="card-body">
+                    <div class="qualification-item">
+                        <div class="qualification-title">BSc in Regional & Urban Planning</div>
+                        <div class="institution"> ............</div>Institute of Technology</div>
+                        <div class="date">2006 - 2008</div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloribus architecto totam pariatur reiciendis necessitatibus.
+                        </div>
+                    </div>
+
+                    <div class="qualification-item">
+                        <div class="qualification-title">BSc Honors Geography & Environmental Studies</div>
+                        <div class="institution"> ............</div>Institute of Technology</div>
+                        <div class="date">2006 - 2008</div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad doloribus architecto totam pariatur reiciendis necessitatibus.
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            
+        </div>
+
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="qualifications-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="card-title">Industry Certifications</h3>
+                </div>
+                <div class="card-body">
+                    <div class="qualification-item">
+                        <div class="qualification-title">Advanced Certificate in Geographic  Information Sydtems (GIS)</div>
+                        <div class="institution">@....</div>
+                        <div class="date">2015</div>
+                    </div>
+                    <div class="qualification-item">
+                        <div class="qualification-title">Project Management Professional (PMP)</div>
+                        <div class="institution">Project Management Institute</div>
+                        <div class="date">2010</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+
+    </main>
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h4>About Us</h4>
+          <p class="company-info">Building excellence since 2008. We specialize in commercial and residential construction projects with a focus on sustainable development.</p>
+      </div>
+
+      <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="contact-info" id="contact" >
+              <p><i class="fas fa-map-marker-alt"></i>1090 Norton Town Center</p>
+              <p><i class="fas fa-phone"></i>0719319442</p>
+              <p><i class="fas fa-envelope"></i>takmab@gmail.com/p>
+          </div>
+          <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2025 TakMab Planning Consultancy. All rights reserved | Designed with <i class="fas fa-heart"></i></p>
+  </div>
+</footer>
