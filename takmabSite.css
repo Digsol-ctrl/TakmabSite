@@ -725,7 +725,7 @@ About_us Sectuion
     flex-shrink: 1;
     flex-basis: calc(33.33% - 1rem );
     margin-bottom: 30px;
-    border-top: 5px solid rgba(222, 234, 222, 0.239);
+    border-top: 5px solid var(--dark-green);
     background: #f4f4f4;
     padding: 1rem;
     border-radius: 5px;
