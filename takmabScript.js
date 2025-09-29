@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         item.classList.add('active');
                     }, index * 300);
                 });
-
             }
         });
     }, { threshold: 0.3 });
@@ -125,10 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
   
-/* TESTIMONIALS */
+/* TESTIMONIALS
 const carousel = document.querySelector('.testimonial-carousel');
 const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
@@ -191,6 +188,7 @@ carousel.addEventListener('touchend', () => isPaused = false);
 startAutoScroll();
 
 var navLinks = document.querySelectorAll('.nav-link')
+*/
 
 
 /* CONTACT FORM SECTION */
